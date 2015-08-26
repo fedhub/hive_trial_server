@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'includes')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookie_parser());
-app.use(session({
+app.use(session( {
     secret: 'anystringoftext',
     saveUninitialized: true, // saves transactions like db even if server is down
     resave: true //resaves even if nothing has changed - consider when performance is important
